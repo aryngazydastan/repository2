@@ -6,7 +6,7 @@ JqueryRails::Application.routes.draw do
     end
   end
 
-  match 'comments' => 'comments#create', :via => [:put]
+  #match 'comments' => 'comments#create', :via => [:put]
   root :to => "comments#index"
   # The priority is based upon order of creation:
   # first created -> highest priority.
