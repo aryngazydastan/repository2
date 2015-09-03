@@ -60,7 +60,7 @@ class CommentsController < ApplicationController
   def search
     @comments = Comment.search do
       keywords params[:query]
-  end.results
+    end.results
 
     respond_to do |format|
       format.html { render :action => "index" }
