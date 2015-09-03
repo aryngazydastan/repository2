@@ -1,0 +1,8 @@
+<tr class='comment' id='comment-<%= comment.id %>'>
+  <td></td>
+  <td class="subject"><%= comment.subject %></td>
+  <td class="body"><%= comment.body %></td>
+  <td class="time"><%= comment.created_at %></td>
+  <td class="file"><%= link_to comment.attachment_file_name, comment.attachment.url if comment.attachment? %></td>
+
+</tr>

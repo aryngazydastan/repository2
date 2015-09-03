@@ -1,0 +1,17 @@
+
+<%= render 'new_comment_links' %>
+
+<%= form_tag search_comments_path, :method => :get do %>
+<p>
+  <%= text_field_tag :query, params[:query] %> 
+  <%= link_to "Поиск", search_comments_path %>
+</p>
+<% end %>
+
+
+<h3><a href="http://localhost:3000/comments">Репозиторий Международного Университета Информационных Технологий</a></h3>
+
+<table id='comments'>
+  <%= render @comments %>
+</table>
+

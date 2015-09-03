@@ -1,0 +1,36 @@
+/*
+ * FIXME: Introduce SCSS & Sprockets
+ *= require 'scaffold'
+ *= require_self
+ *= require_tree .
+*/
+
+.comment {
+	padding: 10px;
+	border: 1px black;
+}
+
+.body {
+	font-size: 6pt;
+}
+
+.file {
+	font-size: 6pt;
+}
+
+.time {
+	font-size: 6pt;
+}
+
+#comments {
+	width: 450px;
+}
+
+.subject {
+	width: 10%;
+}
+
+.border {
+	border: 1pt black;
+}
+

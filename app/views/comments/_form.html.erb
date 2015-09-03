@@ -1,0 +1,34 @@
+<%= form_for(@comment, :remote => (params[:action] == 'new' ? true : false)) do |f| %>
+  <% if @comment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
+
+      <ul>
+      <% @comment.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <fieldset>
+    <div class="field">
+      <%= f.label :name, 'Предмет', :class => 'required' %><br />
+      <%= f.text_field :subject, :required => true %>
+    </div>
+    <div class="field">
+      <%= f.label :name, 'Дата', :class => 'required' %><br />
+      <%= f.text_field :body, :required => true %>
+    </div>
+    <% if params[:attachment] %>
+      <div class="field">
+        <%= f.label :name, 'Файл' %><br />
+        <%= f.file_field :attachment %>
+      </div>
+    <% end %>
+  </fieldset><br />
+
+  <div class="actions">
+    <%= f.submit 'Отправить файл', :data => {:'disable-with' => "Submitting..."} %>
+  </div>
+<% end %>
