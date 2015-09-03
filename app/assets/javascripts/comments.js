@@ -10,7 +10,7 @@ $(document)
       $cancelButton.parent().replaceWith($container);
       e.preventDefault();
     });
-  });
+  })
   .delegate('form[data-remote]', 'ajax:aborted:required', 
     function(){
     var $form = $(this),
@@ -23,9 +23,9 @@ $(document)
     $errorDiv.html($('<h2>', {
       text: 'You must fill in all required fields!'
     }));
-  });
+  })
   .delegate('form[data-remote]', 'ajax:error', 
     function(e, xhr, status, statusText) {
     $('#comments').after('Error status code: ' + xhr.status + ', Error status message: ' + statusText);
-  });
+  })
 
