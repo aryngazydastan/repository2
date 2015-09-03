@@ -1,5 +1,4 @@
 class CommentsController < ApplicationController
-  skip_before_filter :verify_authenticity_token
   respond_to :html, :xml, :json
   respond_to :js, :only => [:create, :update, :destroy]
   # GET /comments
